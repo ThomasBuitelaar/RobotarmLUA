@@ -1,38 +1,16 @@
 require 'robot_arm'
 robot_arm:load_level('exercise 10')
-robot_arm.speed = 1
+robot_arm.speed = 0.999
 
---[[robot_arm:grab()
-for _ = 1,9 do
+counter = 9
+for _  =1,5  do
+robot_arm:grab()
+for _ = 1,counter do
   robot_arm:move_right()
 end
 robot_arm:drop()
-for _ = 1,8 do
+for _ = 1,counter -1 do
   robot_arm:move_left()
 end
-robot_arm:grab()
-for _ = 1,7 do
-  robot_arm:move_right()
+counter = counter -2
 end
-robot_arm:drop()
-for _ = 1,6 do
-  robot_arm:move_left()
-end
-robot_arm:grab()
-for _ = 1,5 do
-  robot_arm:move_right()
-end
-robot_arm:drop()
-for _ = 1,4 do
-  robot_arm:move_left()
-end
-robot_arm:grab()
-for _ = 1,3 do
-  robot_arm:move_right()
-end
-robot_arm:drop()
-robot_arm:move_left()
-robot_arm:move_left()
-robot_arm:grab()
-robot_arm:move_right()
-robot_arm:drop()

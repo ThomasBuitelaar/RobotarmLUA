@@ -1,6 +1,6 @@
 require 'robot_arm'
 robot_arm:load_level('exercise 9')
-robot_arm.speed = 1
+robot_arm.speed = 0.999
 for _ = 1,4 do
 for _ = 1,4 do
   robot_arm:grab()
